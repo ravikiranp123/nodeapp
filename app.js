@@ -40,6 +40,6 @@ app.get("*", function(req, res){
     res.send("Sorry, page not found...What are you doing with your life?")
 })
 
-app.listen(3000, function(){
-    console.log("Server started successfully");
+app.listen(process.env.PORT, function(){
+    console.log("Server started successfully on port:" + process.env.PORT);
 })
