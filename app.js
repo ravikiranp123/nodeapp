@@ -2,7 +2,7 @@
 // var app = express();
 var app = require("express")();
 // var app = express();
-
+var port = process.env.PORT || 3000;
 app.get("/", function(req, res){
     res.send("Hi there, Welcome to my assignment!");
 });
@@ -40,6 +40,6 @@ app.get("*", function(req, res){
     res.send("Sorry, page not found...What are you doing with your life?")
 })
 
-app.listen(process.env.PORT, function(){
+app.listen(port, function(){
     console.log("Server started successfully on port:" + process.env.PORT);
 })
